@@ -2,14 +2,14 @@
 #include <stdio.h>
 
 int check_cycle(listint_t *list) {
-  listint_t *tortoise = list;
-  listint_t *hare = list;
+  listint_t *temp = list;
+  listint_t *temp2 = list;
 
-  while (hare != NULL && hare->next != NULL) {
-    tortoise = tortoise->next;
-    hare = hare->next->next;
+  while (temp2 != NULL && temp2->next != NULL) {
+    temp = temp->next;
+    temp2 = temp2->next->next;
 
-    if (tortoise == hare) {
+    if (temp == temp2) {
       return 1;
     }
   }
