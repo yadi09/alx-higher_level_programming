@@ -19,7 +19,6 @@ int check_cycle(listint_t *list){
 	{
 	  if (node == temp->next)
 	    {
-	      printf("Linked list has a cycle\n");
 	      return (1);
 	    }
 	  temp = temp->next;
@@ -27,6 +26,5 @@ int check_cycle(listint_t *list){
       temp = temp_temp->next;
     }
 
-  printf("Linked list has no cycle\n");
   return (0);
 }

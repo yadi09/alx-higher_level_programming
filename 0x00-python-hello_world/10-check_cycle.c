@@ -1,30 +1,18 @@
 #include "lists.h"
 #include <stdio.h>
 
-/**
- *
- **/
+int check_cycle(listint_t *list) {
+  listint_t *tortoise = list;
+  listint_t *hare = list;
 
-int check_cycle(listint_t *list){
-  listint_t *temp = list;
-  listint_t *node;
-  listint_t *temp_temp;
+  while (hare != NULL && hare->next != NULL) {
+    tortoise = tortoise->next;
+    hare = hare->next->next;
 
-  while (temp != NULL)
-    {
-      node = temp;
-      temp_temp = temp;
-
-      while (temp != NULL)
-	{
-	  if (node == temp->next)
-	    {
-	      return (1);
-	    }
-	  temp = temp->next;
-	}
-      temp = temp_temp->next;
+    if (tortoise == hare) {
+      return 1;
     }
+  }
 
-  return (0);
+  return 0;
 }
