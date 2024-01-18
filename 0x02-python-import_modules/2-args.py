@@ -12,6 +12,6 @@ else:
         print("{} argument:".format(count))
     else:
         print("{} arguments:".format(count))
-        
+
     for i in range(1, (count + 1)):
         print("{:d}: {}".format(i, argv[i]))
