@@ -1,9 +1,8 @@
 #!/usr/bin/python3
-from sys import argv
-count = -1
-for i in argv:
-    count += 1
-    continue
+if __name__ == "__main__":
+    from sys import argv
+count = len(argv)
+count -= 1
 if count == 0:
     print("0 argument.")
 else:
