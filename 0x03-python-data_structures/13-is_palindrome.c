@@ -14,6 +14,9 @@ int is_palindrome(listint_t **head)
   int len = 0, i, j;
   int l_len = 0;
 
+  if (!head || !*head)
+    return (1);
+
   while (length_node->next)
     {
       length_node = length_node->next;
