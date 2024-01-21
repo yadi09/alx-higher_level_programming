@@ -1,5 +1,31 @@
 #include "lists.h"
 
+
+
+/**
+ * reverse_nodes - function
+ * @head: singly linked list
+ * Return: void
+ **/
+
+void reverse_nodes(listint_t **head)
+  {
+    listint_t *prev = NULL;
+    listint_t *current = *head;
+    listint_t *next = NULL;
+
+    while (current != NULL)
+      {
+	next = current->next;
+	current->next = prev;
+	prev = current;
+	current = next;
+      }
+
+    *head = prev;
+  }
+
+
 /**
  * is_palindrom - function
  * @head: singly linked list
@@ -8,35 +34,41 @@
 
 int is_palindrome(listint_t **head)
 {
-  listint_t *first_node = *head;
-  listint_t *last_node = *head;
-  listint_t *length_node = *head;
-  int len = 0, i, j = 0;
-  int l_len = 0;
+  listint_t *first = *head;
+  listint_t *last = *head;
+  listint_t *prev = NULL;
 
-  if (!head || !*head)
+  if (!head || !*head || !(*head)->next)
     return (1);
 
-  while (length_node->next)
+   while (last != NULL && last->next != NULL)
     {
-      length_node = length_node->next;
-      len++;
+        last = last->next->next;
+        prev = first;
+        first = first->next;
     }
 
-  for (i = 0; i < (l_len / 2); i++)
+    if (last != NULL)
     {
-      len = len - 1;
-      while (j < len)
-	{
-	  last_node = last_node->next;
-	  j++;
-	}
-      if (first_node->n != last_node->n)
-	{
-	  return (0);
-	}
-      first_node = first_node->next;
+        first = first->next;
     }
+
+    prev->next = NULL;
+    reverse_nodes(&first);
+
+    while (*head != NULL && first != NULL)
+    {
+      if ((*head)->n != first->n)
+            return 0;
+      (*head) = (*head)->next;
+      first = first->next;
+    }
+
+    if (*head == NULL && first == NULL)
+        return 1;
+    else
+        return 0;
+    
 
   return (1);
 }
