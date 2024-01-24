@@ -6,7 +6,7 @@ def roman_to_int(roman_string):
                   'D': 500, 'M': 1000}
     prev = _sum = 0
 
-    if type(roman_string) is not str and roman_string is None:
+    if type(roman_string) is not str or roman_string is None:
         return 0
 
     for i in roman_string:
