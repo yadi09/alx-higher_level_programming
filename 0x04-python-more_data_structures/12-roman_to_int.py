@@ -6,6 +6,9 @@ def roman_to_int(roman_string):
                   'D': 500, 'M': 1000}
     prev = _sum = 0
 
+    if type(roman_string) is not str and roman_string == None:
+        return 0
+
     for i in roman_string:
         value = roman_dict.get(i)
         if prev >= value:
@@ -19,4 +22,4 @@ def roman_to_int(roman_string):
     if not prev < value:
         _sum = _sum + prev
 
-    return _sum
+    return int(_sum)
