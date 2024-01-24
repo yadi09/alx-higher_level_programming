@@ -22,4 +22,4 @@ def roman_to_int(roman_string):
     if not prev < value:
         _sum = _sum + prev
 
-    return int(_sum)
+    return _sum
