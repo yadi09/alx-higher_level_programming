@@ -24,26 +24,7 @@ class Square:
         TypeError: If the size is not an integer.
         ValueError: If the size is negative.
         """
-        self.set_size(size)
-
-    @property
-    def size(self, value):
-        """
-        Sets the size of the square.
-
-        Args:
-            size (int): The new size of the square.
-
-        Raises:
-            TypeError: If the size is not an integer.
-            ValueError: If the size is negative.
-        """
-        if (not isinstance(size, int)):
-            raise TypeError("size must be an integer")
-        elif (size < 0):
-            raise ValueError("size must be >= 0")
-        else:
-            self.__size = size
+        self.__size = size
 
     @property
     def size(self):
@@ -55,5 +36,24 @@ class Square:
         """
         return self.__size
 
+    @size.setter
+    def size(self, value):
+        """
+        Sets the size of the square.
+
+        Args:
+            size (int): The new size of the square.
+
+        Raises:
+            TypeError: If the size is not an integer.
+            ValueError: If the size is negative.
+        """
+        if (not isinstance(value, int)):
+            raise TypeError("size must be an integer")
+        elif (value < 0):
+            raise ValueError("size must be >= 0")
+        else:
+            self.__size = value
+
     def area(self):
-        return self.get_size() * self.get_size()
+        return self.__size ** 2
