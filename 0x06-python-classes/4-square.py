@@ -26,7 +26,8 @@ class Square:
         """
         self.set_size(size)
 
-    def set_size(self, size):
+    @property
+    def size(self, value):
         """
         Sets the size of the square.
 
@@ -44,7 +45,8 @@ class Square:
         else:
             self.__size = size
 
-    def get_size(self):
+    @property
+    def size(self):
         """
         Returns the size of the square.
 
@@ -54,4 +56,4 @@ class Square:
         return self.__size
 
     def area(self):
-        return __size * __size
+        return self.get_size() * self.get_size()
