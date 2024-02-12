@@ -4,10 +4,14 @@
 
 class Rectangle:
     """Schema of rectangle object"""
+
+    number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         """Initializes a new Rectangle object."""
         self.height = height
         self.width = width
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -61,4 +65,5 @@ class Rectangle:
         return "Rectangle({}, {})".format(self.width, self.height)
 
     def __del__(self):
-        print(Bye rectangle...)
+        print("Bye rectangle...")
+        Rectangle.number_of_instances -= 1
