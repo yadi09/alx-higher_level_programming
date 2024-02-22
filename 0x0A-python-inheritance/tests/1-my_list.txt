@@ -1,0 +1,32 @@
+The "1-main" Module
+======================
+
+Using "MyList"
+======================
+
+Import the function from the Module
+       >>> my_list = __import__('1-my_list').MyList
+
+Correct Output-case:
+	>>> list = my_list()
+	>>> list
+	[]
+
+Correct Output-case:
+	>>> list.append(1)
+	>>> list.append(4)
+	>>> list.append(2)
+	>>> list.append(3)
+	>>> list.append(5)
+	>>> list
+	[1, 4, 2, 3, 5]
+
+Correct Output-case:
+	>>> print(list)
+	[1, 4, 2, 3, 5]
+
+Correct Output-case:
+	>>> list.print_sorted()
+	[1, 2, 3, 4, 5]
+	>>> print(list)
+	[1, 4, 2, 3, 5]
