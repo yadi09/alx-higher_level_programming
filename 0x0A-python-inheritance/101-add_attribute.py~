@@ -1,0 +1,9 @@
+#!/usr/bin/python3
+"""function that adds a new attribute to an object if it’s possible:"""
+
+
+def add_attribute(po, prmName, prmValue):
+    if not hasattr(po, "__dict__"):
+        raise TypeError("can't add new attribute")
+    if (not hasattr(po, prmName)):
+        po.__setattr__(prmName, prmValue)
