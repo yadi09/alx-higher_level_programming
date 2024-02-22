@@ -1,4 +1,4 @@
-The "1-main" Module
+The "1-my_list" Module
 ======================
 
 Using "MyList"
