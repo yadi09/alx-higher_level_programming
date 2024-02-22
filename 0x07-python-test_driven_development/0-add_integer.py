@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 """function that adds 2 integers.
 a and b must be integers or floats,
 otherwise raise a TypeError exception with the message
