@@ -77,7 +77,10 @@ Correct output - case:
 	...
 	TypeError: Each row of the matrix must have the same size
 
-
+Correct output - case:
+        >>> mrx = [[1, 2, 3],[4, float('inf'), 6]]
+        >>> mrx_div(mrx, float('inf'))
+        [[0.0, 0.0, 0.0], [0.0, nan, 0.0]]
 
 Correct output - case:
 	>>> mrx = [[1, 2, 3],[4, 5, 6]]
