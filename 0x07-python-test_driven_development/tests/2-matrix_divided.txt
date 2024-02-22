@@ -81,3 +81,8 @@ Correct output - case:
         >>> mrx = [[3, 9], [12, 15]]
         >>> mrx_div(mrx, float('inf'))
 	[[0.0, 0.0], [0.0, 0.0]]
+
+Correct output - case:
+	>>> mrx = [[1, 2, 3],[4, float('nan'), 6]]
+	>>> mrx_div(mrx, 3)
+	[[0.33, 0.67, 1.0], [1.33, nan, 2.0]]
