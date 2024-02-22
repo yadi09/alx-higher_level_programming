@@ -18,15 +18,24 @@ Correct Output-case:
 	>>> list.append(2)
 	>>> list.append(3)
 	>>> list.append(5)
-	>>> list
-	[1, 4, 2, 3, 5]
-
-Correct Output-case:
-	>>> print(list)
-	[1, 4, 2, 3, 5]
-
-Correct Output-case:
 	>>> list.print_sorted()
 	[1, 2, 3, 4, 5]
 	>>> print(list)
 	[1, 4, 2, 3, 5]
+
+Correct Output-case:
+	>>> list = my_list()
+	>>> list.append(-1)
+	>>> list.append(-4)
+	>>> list.append(-2)
+	>>> list.append(-3)
+	>>> list.append(-5)
+	>>> print(list)
+	[-1, -4, -2, -3, -5]
+	>>> list.print_sorted()
+	[-5, -4, -3, -2, -1]
+
+Correct Output-case:
+	>>> list = my_list()
+	>>> list.print_sorted()
+	[]
