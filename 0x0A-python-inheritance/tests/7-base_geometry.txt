@@ -85,3 +85,18 @@ Check Correct Output-Case:
       Traceback (most recent call last):
       ...
       TypeError: age must be an integer
+
+Check Correct Output-Case:
+      >>> bg = base_geo()
+      >>> bg.integer_validator("age", [3])
+      Traceback (most recent call last):
+      ...
+      TypeError: age must be an integer
+
+Check Correct Output-Case:
+      >>> bg = base_geo()
+      >>> bg.integer_validator("age", {3, 4})
+      Traceback (most recent call last):
+      ...
+      TypeError: age must be an integer
+
