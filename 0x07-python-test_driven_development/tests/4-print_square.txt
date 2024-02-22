@@ -1,0 +1,42 @@
+The "4-print_square" Module
+===========================
+
+Using "print_squar"
+===========================
+
+Import the function from "4-print_square.py" Module
+       >>> p = __import__('4-print_square').print_square
+
+Correct output - case: 4
+	>>> p(4)
+	####
+	####
+	####
+	####
+
+Correct output - case: 0
+	>>> p(0)
+
+Correct output - case: -1
+	>>> p(-1)
+	Traceback (most recent call last):
+	...
+	ValueError: size must be >= 0
+
+Correct output - case: 0.232
+	>>> p(0.232)
+	Traceback (most recent call last):
+	...
+	TypeError: size must be an integer
+
+Correct output - case: "A"
+	>>> p("A")
+	Traceback (most recent call last):
+	...
+	TypeError: size must be an integer
+
+Correct output - case: no parametr
+	>>> p()
+	Traceback (most recent call last):
+	...
+	TypeError: print_square() missing 1 required positional argument: 'size'
