@@ -22,6 +22,12 @@ Correct output - case:
 	TypeError: first_name must be a string
 
 Correct output - case:
+	>>> say("Bob", 12)
+        Traceback (most recent call last):
+	...
+	TypeError: last_name must be a string
+
+Correct output - case:
 	>>> say()
 	Traceback (most recent call last):
 	...
