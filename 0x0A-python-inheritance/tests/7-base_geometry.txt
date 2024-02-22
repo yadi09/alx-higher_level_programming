@@ -31,3 +31,57 @@ Check Correct Output-Case:
       Traceback (most recent call last):
       ...
       ValueError: distance must be greater than 0
+
+Check Correct Output-Case:
+      >>> bg = base_geo()
+      >>> print(dir(bg))
+      ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'area', 'integer_validator']
+
+Check Correct Output-Case:
+      >>> bg = base_geo()
+      >>> bg.integer_validator("age", -4)
+      Traceback (most recent call last):
+      ...
+      ValueError: age must be greater than 0
+
+Check Correct Output-Case:
+      >>> bg = base_geo()
+      >>> bg.integer_validator("age", 13.5)
+      Traceback (most recent call last):
+      ...
+      TypeError: age must be an integer
+
+Check Correct Output-Case:
+      >>> bg = base_geo()
+      >>> bg.area()
+      Traceback (most recent call last):
+      ...
+      Exception: area() is not implemented
+
+Check Correct Output-Case:
+      >>> bg = base_geo()
+      >>> bg.integer_validator("age")
+      Traceback (most recent call last):
+      ...
+      TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+Check Correct Output-Case:
+      >>> bg = base_geo()
+      >>> bg.integer_validator("age", (4,))
+      Traceback (most recent call last):
+      ...
+      TypeError: age must be an integer
+
+Check Correct Output-Case:
+      >>> bg = base_geo()
+      >>> bg.integer_validator("age", True)
+      Traceback (most recent call last):
+      ...
+      TypeError: age must be an integer
+
+Check Correct Output-Case:
+      >>> bg = base_geo()
+      >>> bg.integer_validator("age", None)
+      Traceback (most recent call last):
+      ...
+      TypeError: age must be an integer
