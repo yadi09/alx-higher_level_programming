@@ -16,7 +16,7 @@ def matrix_divided(matrix, div):
                 "matrix must be a matrix (list of lists) of integers/floats")
         for x in mrx_list:
             if type(x) is not int and type(x) is not float:
-                raise TypeError("matrix must be a matrix" +
+                raise TypeError("matrix must be a matrix " +
                                 "(list of lists) of integers/floats")
 
     for mrx_list in matrix:
