@@ -1,8 +1,0 @@
-The "4-print_square" Module
-===========================
-
-Using "print_squar"
-===========================
-
-Import the function from "4-print_square.py" Module
-       >>> p = __import__('4-print_square').print_square
