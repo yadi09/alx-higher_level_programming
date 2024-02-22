@@ -3,6 +3,7 @@
 
 
 def add_attribute(PO, PN, PV):
+    """function that adds a new attribute to an object"""
     if not hasattr(PO, "__dict__"):
         raise TypeError("can't add new attribute")
     if (not hasattr(PO, PN)):
