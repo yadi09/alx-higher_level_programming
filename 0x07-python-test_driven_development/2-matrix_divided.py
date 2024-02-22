@@ -12,10 +12,12 @@ def matrix_divided(matrix, div):
 
     for mrx_list in matrix:
         if type(mrx_list) is not list:
-            raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+            raise TypeError(
+                "matrix must be a matrix (list of lists) of integers/floats")
         for x in mrx_list:
             if type(x) is not int and type(x) is not float:
-                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+                raise TypeError("matrix must be a matrix" +
+                                "(list of lists) of integers/floats")
 
     for mrx_list in matrix:
         if len(mrx_list) != len(matrix[0]):
