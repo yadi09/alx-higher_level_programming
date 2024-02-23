@@ -11,4 +11,3 @@ def append_after(filename="", search_string="", new_string=""):
             if i.find(search_string) != -1:
                 _line += [new_string]
         f.write("".join(_line))
-
