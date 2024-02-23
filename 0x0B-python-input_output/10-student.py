@@ -16,7 +16,7 @@ class Student:
 
     def to_json(self, attrs=None):
         _list = {}
-        if attrs:
+        if attrs or attrs == []:
             for i in attrs:
                 for key, value in self.__dict__.items():
                     if key == i:
