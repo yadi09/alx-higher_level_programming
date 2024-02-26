@@ -62,4 +62,3 @@ class Base:
                 return [cls.create(**x) for x in str_dict]
         except IOError:
             return []
-    
