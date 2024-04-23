@@ -8,7 +8,7 @@ if (!process.argv[3]) {
 } else {
   for (let i = 2; i < Number(process.argv.length); i++) {
     const num = Number(process.argv[i]);
-    if (max < num) {
+    if (max <= num) {
       max2nd = max;
       max = num;
     }
