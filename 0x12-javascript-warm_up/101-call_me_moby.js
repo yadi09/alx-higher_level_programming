@@ -4,4 +4,4 @@ exports.callMeMoby = function (x, theFunduction) {
   while (x-- > 0) {
       theFunction();
     }
-}
+};
