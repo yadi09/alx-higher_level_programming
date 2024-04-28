@@ -1,10 +1,8 @@
 #!/usr/bin/python3
 """
-script that lists all State objects, from the database hbtn_0e_6_usa
-script that lists all State objects,
-script that lists all State objects,
-from the database hbtn_0e_6_usa
-script that lists all State objects.
+This module defines a script that creates the State “California”
+with the City “San Francisco” from the database hbtn_0e_100_usa
+Creates the State "California" with the City "San Francisco" from a DB
 """
 
 import sys
@@ -14,12 +12,6 @@ from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
 
 if __name__ == "__main__":
-    """
-    script that lists all State objects,
-    from the database hbtn_0e_6_usa
-    script that lists all State objects,
-    from the database hbtn_0e_6_usa
-    """
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(
         sys.argv[1],
         sys.argv[2],

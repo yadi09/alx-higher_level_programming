@@ -1,11 +1,7 @@
 #!/usr/bin/python3
 """
-python file that contains the class definition of a State,
-and an instance Base = declarative_base()
-python file that contains the class definition of a State,
-and an instance Base = declarative_base()
-python file that contains the class definition of a State,
-and an instance Base = declarative_base()
+This module defines a State class
+Contains State class and Base, an instance of declarative_base()
 """
 
 from sqlalchemy.ext.declarative import declarative_base
@@ -18,10 +14,7 @@ Base = declarative_base(metadata=mymetadata)
 
 class State(Base):
     """
-    class definition of a State
-    class definition of a State
-    class definition of a State
-    class definition of a State
+    Class with id and name attributes of each state
     """
     __tablename__ = 'states'
 
