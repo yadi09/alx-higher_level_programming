@@ -1,28 +1,15 @@
 #!/usr/bin/node
 
-function secondLargeNum (args, num) {
-  let nof = 0;
-  let i = 0;
-  while (args[i]) {
-    if (args[i] > num) {
-      nof++;
-    }
-    if (nof > 1) {
-      return false;
-    }
-    i++;
-  }
-  return true;
-}
+const nums = process.argv.slice(2);
+let max = 0;
+let max2nd = 0;
+let num = 0;
 
-const args = process.argv.slice(2);
-if (args.length <= 1) {
-  console.log(0);
-} else {
-  for (let i = 0; i < args.length; i++) {
-    if (secondLargeNum(args, args[i])) {
-      console.log(args[i]);
-      break;
-    }
+for (let i = 0; i < nums.length; i++) {
+  num = Number(nums[i]);
+  if (num > max) {
+    max2nd = max;
+    max = num;
   }
 }
+console.log(max2nd);
