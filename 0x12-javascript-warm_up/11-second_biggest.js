@@ -10,6 +10,8 @@ for (let i = 0; i < nums.length; i++) {
   if (num > max) {
     max2nd = max;
     max = num;
+  } else if (max2nd < num) {
+    max2nd = num;
   }
 }
 console.log(max2nd);
