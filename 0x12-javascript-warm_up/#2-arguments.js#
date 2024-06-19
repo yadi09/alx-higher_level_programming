@@ -1,0 +1,7 @@
+#!/usr/bin/node
+
+var length = process.argvif (length == 2)
+{
+    console.log();
+}
+else if (length)
