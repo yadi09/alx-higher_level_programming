@@ -9,19 +9,16 @@ class Rectangle {
   }
 
   print () {
-    let x = '';
-    let isFirstTime = true;
-    for (let i = 0; i < this.height; i++) {
-      if (isFirstTime) {
-        for (let j = 0; j < this.width; j++) {
-          x += 'x';
-        }
-        isFirstTime = false;
+    for (let i = 0; i < this.height; ++i) {
+      let j = 0;
+      for (; j < this.width; ++j) {
+        process.stdout.write('X');
       }
-      console.log(x);
+      if (j === this.width) {
+        console.log('');
+      }
     }
   }
 }
-
 
 module.exports = Rectangle;
