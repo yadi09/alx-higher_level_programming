@@ -9,20 +9,19 @@ class Rectangle {
   }
 
   print () {
-    if (this.width && this.height) {
-      let x = '';
-      let isFirstTime = false;
-      for (let i = 0; i < this.height; i++) {
-        if (isFirstTime) {
-          for (let j = 0; j < this.width; j++) {
-            x += 'x';
-          }
-          isFirstTime = true;
+    let x = '';
+    let isFirstTime = true;
+    for (let i = 0; i < this.height; i++) {
+      if (isFirstTime) {
+        for (let j = 0; j < this.width; j++) {
+          x += 'x';
         }
-        console.log(x);
+        isFirstTime = false;
       }
+      console.log(x);
     }
   }
 }
+
 
 module.exports = Rectangle;
