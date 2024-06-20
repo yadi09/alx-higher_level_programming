@@ -9,14 +9,16 @@ class Rectangle {
   }
 
   print () {
-    for (let i = 0; i < this.height; ++i) {
-      let j = 0;
-      for (; j < this.width; ++j) {
-        process.stdout.write('X');
+    let character = '';
+    let isFirstTime = true;
+    for (let h = 0; h < this.height; h++) {
+      if (isFirstTime) {
+        for (let w = 0; w < this.width; w++) {
+          character = character + 'X';
+        }
+        isFirstTime = false;
       }
-      if (j === this.width) {
-        console.log('');
-      }
+      console.log(character);
     }
   }
 }
