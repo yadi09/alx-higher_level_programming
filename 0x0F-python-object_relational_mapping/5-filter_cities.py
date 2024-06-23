@@ -7,7 +7,7 @@ import sys
 
 
 if __name__ == "__main__":
-    "a script that takes in the name of a state as an argument
+    "a script that takes in the name of a state as an argument\
     and lists all cities"
     db = MySQLdb.connect(
         host="localhost",
@@ -22,14 +22,10 @@ if __name__ == "__main__":
     SELECT cities.name FROM cities WHERE cities.state_id = (\
     SELECT id FROM states WHERE states.name = %s)"
 
-    try:
-        cursor.execute(query, (sys.argv[4],))
-        result = cursor.fetchall()
-        cities = ", ".join([row[0] for row in result])
-        print(cities)
-
-    except Exception:
-        pass
+    cursor.execute(query, (sys.argv[4],))
+    result = cursor.fetchall()
+    cities = ", ".join([row[0] for row in result])
+    print(cities)
 
     cursor.close()
     db.close()
