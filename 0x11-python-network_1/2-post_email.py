@@ -10,5 +10,5 @@ if __name__ == "__main__":
     url = sys.argv[1]
     requ = request.Request(url, query_str)
     with request.urlopen(requ) as respo:
-        data = respo.read().decode(utf-8)
+        data = respo.read().decode('utf-8')
         print(data)
