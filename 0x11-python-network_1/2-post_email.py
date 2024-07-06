@@ -8,7 +8,7 @@ import sys
 if __name__ == "__main__":
     query_str = parse.urlencode({'email': sys.argv[2]}).encode('utf-8')
     url = sys.argv[1]
-    requ = request.Request(url, query_str, method='POST')
+    requ = request.Request(url, query_str)
     with request.urlopen(requ) as respo:
         data = respo.read().decode(utf-8)
         print(data)
