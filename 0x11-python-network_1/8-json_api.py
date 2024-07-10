@@ -1,15 +1,15 @@
 #!/usr/bin/python3
 """script"""
+from sys import argv
 import requests
-import sys
 
 if __name__ == "__main__":
-    str = {"q": sys.argv[1][0] if len(sys.argv) > 1 else ""}
-    rspo = requests.post("http://0.0.0.0:5000/search_user", data=str)
+    data = {"q": argv[1][0] if len(argv) > 1 else ""}
+    respost = requests.post("http://0.0.0.0:5000/search_user", data=data)
     try:
-        json = rspo.json()
-        if json:
-            print("[{}] {}".format(json.get("id"), json.get("name")))
+        json_data = rspost.json()
+        if json_data == {}:
+            print("[{}] {}".format(json_data.get("id"), json_data.get("name")))
         else:
             print("No result")
     except ValueError:
